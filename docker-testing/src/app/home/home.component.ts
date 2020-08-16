@@ -13,7 +13,8 @@ interface OS{
 export class HomeComponent{
   
   startDate = new Date(1990, 0, 1);
-  SocialNet: String;
+  socialNet: String;
+  email:String;
   os: OS[] = [
     {value: 'android', viewValue: 'Android'},
     {value: 'ios', viewValue: 'IOS'},
