@@ -2,12 +2,15 @@
     min-width: 150px;
     max-width: 500px;
     width: 100%;
-  }
+}
   
-  .example-full-width {
+.example-full-width {
     width: 100%;
-  }
+}
   
-  td {
+td {
     padding-right: 8px;
-  }
+}
+.mat-radio-button ~ .mat-radio-button {
+    margin-left: 40px;
+}

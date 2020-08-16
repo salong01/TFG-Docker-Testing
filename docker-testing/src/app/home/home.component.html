@@ -45,7 +45,22 @@
                     <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
                 </mat-form-field></td>
             </tr></table>
-
+            <h4>Do you use mobile to use social network?</h4>
+            <tr></tr>
+            <mat-radio-group ng-model="SocialNet">
+                <mat-radio-button value="Yes">Yes</mat-radio-button>
+                <mat-radio-button value="No">No</mat-radio-button>
+            </mat-radio-group>
+            <br>
+            <p> {{ SocialNet }} </p>
+            <div *ngif="SocialNet=='Yes'">
+                <h4>Which Operative system do you usually use?</h4>
+                <mat-form-field>
+                    <mat-label>Operative System</mat-label>
+                <mat-select></mat-select>
+                </mat-form-field>
+            </div>
+            <br><br>
             <button mat-raised-button color="yellow">Send Form</button> 
     </form>
 </div>
