@@ -4,7 +4,6 @@ node {
         stage('Setup') {
             steps {
                 sh 'cd docker-testing'
-                sh 'pwd'
                 app = docker.build("saulalonso2/docker-testing")
             }
         }
