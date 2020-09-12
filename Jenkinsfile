@@ -7,11 +7,6 @@ pipeline {
                stash includes: '**/*', name: 'workspace'
            }
        }
-       stage('echo') {
-           steps {
-                sh 'echo test'
-           }
-       }
        stage('Build') {
            agent {
                docker {
