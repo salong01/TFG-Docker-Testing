@@ -8,7 +8,9 @@ pipeline {
            }
        }
        stage('echo') {
-           sh 'echo test'
+           steps {
+                sh 'echo test'
+           }
        }
        stage('Build') {
            agent {
