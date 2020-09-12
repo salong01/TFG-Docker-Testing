@@ -6,7 +6,9 @@ pipeline {
            steps {
                stash includes: '**/*', name: 'workspace'
            }
-
+       }
+       stage('echo') {
+           sh 'echo test'
        }
        stage('Build') {
            agent {
