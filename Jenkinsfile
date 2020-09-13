@@ -1,4 +1,4 @@
-node {
+pipeline {
     def app
     stages {
         stage('Setup') {
@@ -15,6 +15,7 @@ node {
             }
             steps{
                 sh 'node --version'
+                app = docker.build("saulalonso2/docker-testing")
             }
         }
     }
