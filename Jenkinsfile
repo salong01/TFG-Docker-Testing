@@ -1,10 +1,10 @@
 pipeline {
-    def app
+    
     stages {
         stage('Setup') {
             steps {
                 sh 'cd docker-testing'
-                app = docker.build("saulalonso2/docker-testing")
+                docker.build("saulalonso2/docker-testing")
             }
         }
         stage('Build') {
