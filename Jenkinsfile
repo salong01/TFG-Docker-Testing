@@ -1,21 +1,19 @@
 pipeline {
-    
+    agent {
+        docker {
+            image 'node:14-alpine'
+        }
+    }
     stages {
         stage('Setup') {
             steps {
-                sh 'cd docker-testing'
-                docker.build("saulalonso2/docker-testing")
+                sh 'echo "setup step"'
+                sh 'node --version'
             }
         }
         stage('Build') {
-            agent {
-                docker {
-                    image 'node:14-alpine'
-                }
-            }
             steps{
-                sh 'node --version'
-                app = docker.build("saulalonso2/docker-testing")
+                sh 'echo "build stage"'
             }
         }
     }
